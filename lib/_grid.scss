@@ -1,0 +1,72 @@
+// AUTHOR: Esteban Castro Borsani
+// LICENSE: MIT
+// v1.0
+
+$gridGuttersMap: (
+  Zero: 0,
+  Md: -1em 0 1em -1em,
+  Lg: -1.5em 0 1.5em -1.5em,
+  Xl: -2em 0 2em -2em
+);
+
+@mixin grid($gutters: Md) {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+
+  @if $gutters != null {
+    margin: map-get($gridGuttersMap, $gutters);
+  }
+}
+
+
+$alignMap: (
+  top: flex-start,
+  bottom: flex-end,
+  center: center
+);
+
+$justifyContentMap: (
+  center: center
+);
+
+$flexMap: (
+  auto: none,
+  fit: 1,
+  full: 0 0 100%,
+  1 of 2: 0 0 50%,
+  1 of 3: 0 0 33.3333%,
+  1 of 4: 0 0 25%
+);
+
+$cellGuttersMap: (
+  Zero: 0,
+  Md: 1em 0 0 1em,
+  Lg: 1.5em 0 0 1.5em,
+  Xl: 2em 0 0 2em
+);
+
+@mixin grid-cell($flex: fit, $flexCell: true, $alignItems: null, $justifyContent: null, $alignSelf: null, $gutters: Md) {
+  flex: map-get($flexMap, $flex);
+
+  @if $flexCell == true {
+    display: flex;
+  }
+
+  @if $alignItems != null {
+    align-items: map-get($alignMap, $alignItems);
+  }
+
+  @if $justifyContent != null {
+    justify-content: map-get($justifyContentMap, $justifyContent);
+  }
+
+  @if $alignSelf != null {
+    align-self: map-get($alignMap, $alignSelf);
+  }
+
+  @if $gutters != null {
+    padding: map-get($cellGuttersMap, $gutters);
+  }
+}
