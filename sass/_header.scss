@@ -1,0 +1,55 @@
+.header {
+  @include grid();
+  padding: 1.5em 1.5em;
+  margin-bottom: 5em;
+}
+
+  .header__site_name {
+    @include grid-cell(full, $alignItems: center, $justifyContent: center);
+
+    @media (min-width: $break-lg) {
+      @include grid-cell($justifyContent: left);
+    }
+  }
+
+  .header__github {
+    @include grid-cell(full, $alignItems: center, $justifyContent: center);
+
+    @media (min-width: $break-lg) {
+      @include grid-cell($justifyContent: right);
+    }
+  }
+
+.button {
+  font-size: 0.8em;
+  background: #46B980;
+  color: #FFF;
+  transition: background-color 0.2s ease 0s;
+  cursor: pointer;
+  padding: 0.5em 1em;
+
+  &:hover, &:focus, &:active {
+    background-color: #389466;
+  }
+
+  & > .fa {
+    font-size: 1.2em;
+    margin-right: 0.5em;
+  }
+}
+
+.site_name {
+  font-size: 1.5em;
+}
+
+.inspiration {
+  display: block;
+  margin: 0 0 0 1em;
+  font-size: 0.8em;
+  font-weight: 300;
+  color: #808080;
+
+  @media (min-width: $break-lg) {
+    display: inline;
+  }
+}

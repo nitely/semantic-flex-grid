@@ -1,0 +1,22 @@
+{
+  "name": "semantic-flexbox-grid",
+  "version": "1.0.0",
+  "description": "Semantic Flex Grid",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "autoprefixer": "^6.1.2",
+    "gulp": "^3.9.0",
+    "gulp-minify-css": "^1.2.2",
+    "gulp-postcss": "^6.0.1",
+    "gulp-ruby-sass": "^2.0.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "gulp": "gulp"
+  },
+  "keywords": [
+    "grid"
+  ],
+  "author": "Esteban Castro Borsani",
+  "license": "MIT"
+}

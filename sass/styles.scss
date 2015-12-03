@@ -1,0 +1,153 @@
+@import 'grid';
+@import 'variables';
+@import 'elements';
+@import 'header';
+
+
+.Container {
+  max-width: 50em;
+  margin: 0 auto;
+  padding: 0 1.5em;
+}
+
+.Demo {
+  width: 100%;
+  padding: 0.8em 1em;
+  background: rgba(147, 128, 108, 0.1) none repeat scroll 0 0;
+  border-radius: 3px;
+  text-align: center;
+}
+
+  .Demo--left {
+    text-align: left;
+  }
+
+// Basic Grids
+.Basic {
+  @include grid;
+
+  & > div {
+    @include grid-cell;
+  }
+}
+
+// Individual Sizing
+.Individual {
+  @include grid;
+}
+
+  .Individual__auto {
+    @include grid-cell;
+  }
+
+  .Individual__half {
+    @include grid-cell(1 of 2);
+  }
+
+  .Individual__third {
+    @include grid-cell(1 of 3);
+  }
+
+  .Individual__quarter {
+    @include grid-cell(1 of 4);
+  }
+
+// Responsive (mobile first)
+.Responsive {
+  @include grid;
+}
+
+  .Responsive__half {
+    @include grid-cell(full);
+
+    @media (min-width: $break-lg) {
+      @include grid-cell(1 of 2);
+    }
+  }
+
+  .Responsive__third {
+    @include grid-cell(full);
+
+    @media (min-width: $break-lg) {
+      @include grid-cell(1 of 3);
+    }
+  }
+
+// Grid-ception
+.Grid-ception {
+  @include grid;
+}
+
+.Grid-ception__auto {
+  @include grid-cell;
+}
+
+  .Grid-ception__lvl-1 {
+    @include grid;
+    margin-bottom: 0;
+  }
+
+    .Grid-ception__lvl-1__third {
+      @include grid-cell(1 of 3, $flexCell: false);
+    }
+
+    .Grid-ception__lvl-2 {
+      @include grid;
+      margin-bottom: 0;
+
+      & > div {
+        @include grid-cell;
+      }
+    }
+
+.Grid-ception__third {
+  @include grid-cell(1 of 3);
+}
+
+// Top-aligned
+.Top-aligned {
+  @include grid;
+
+  & > div {
+    @include grid-cell($alignItems: top);
+  }
+}
+
+// Bottom-aligned
+.Bottom-aligned {
+  @include grid;
+
+  & > div {
+    @include grid-cell($alignItems: bottom);
+  }
+}
+
+// Vertically-centered
+.Vertically-centered {
+  @include grid;
+
+  & > div {
+    @include grid-cell($alignItems: center);
+  }
+}
+
+// Mixed-alignment
+.Mixed-alignment {
+  @include grid;
+}
+
+  .Mixed-alignment__cell {
+    @include grid-cell;
+  }
+
+  .Mixed-alignment__top {
+    @include grid-cell($alignItems: top);
+  }
+
+  .Mixed-alignment__center {
+    @include grid-cell($alignItems: center);
+  }
+
+  .Mixed-alignment__bottom {
+    @include grid-cell($alignItems: bottom);
+  }
