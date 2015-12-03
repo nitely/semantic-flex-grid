@@ -1,6 +1,6 @@
 # Semantic Flex Grid
 
-This a port of [solved by flexbox grid system](http://philipwalton.github.io/solved-by-flexbox/demos/grids/)
+This is a port of [solved by flexbox grid system](http://philipwalton.github.io/solved-by-flexbox/demos/grids/)
 to semantic Sass.
 
 For more examples [visit the site](http://nitely.github.io/semantic-flex-grid/).
