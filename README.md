@@ -53,7 +53,7 @@ Example:
 | $flex | auto, fit, full, 1 of 2, 1 of 3, 1 of 4 | fit |
 | $flexCell | true, false | true |
 | $alignItems | top, bottom, center | null |
-| $justifyContent | center | null |
+| $justifyContent | center, left, right | null |
 | $alignSelf | top, bottom, center | null |
 | $gutters | Zero, Md, Lg, Xl | Md |
 
