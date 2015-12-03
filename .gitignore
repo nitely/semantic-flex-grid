@@ -1,0 +1,22 @@
+# Node
+node_modules
+
+# SASS
+.sass-cache
+
+# Mr Developer / eclipse pydev
+.mr.developer.cfg
+.project
+.pydevproject
+.settings
+
+# Rope
+.ropeproject
+
+# Pycharm
+.idea
+
+# Vim
+*~
+*.swp
+*.swo
